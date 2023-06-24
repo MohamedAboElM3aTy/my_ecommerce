@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: myTheme(),
       title: 'Ecommerce App',
-      initialRoute: AppRoutes.loginPageRoute,
+      initialRoute: AppRoutes.authPageRoute,
       onGenerateRoute: generateRoute,
     );
   }
