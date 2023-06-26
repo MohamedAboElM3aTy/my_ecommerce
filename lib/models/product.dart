@@ -5,7 +5,7 @@ class Product {
   final String title;
   final int price;
   final String imageUrl;
-  final int? discount;
+  final int discount;
   final double? rating;
   final String category;
 
@@ -16,7 +16,7 @@ class Product {
     required this.imageUrl,
     this.category = 'other',
     this.rating,
-    this.discount,
+    this.discount = 0,
   });
 }
 
