@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:my_ecommerce/models/product.dart';
 
 class ListItemHome extends StatelessWidget {
@@ -61,17 +62,29 @@ class ListItemHome extends StatelessWidget {
             const SizedBox(height: 6.0),
             Text(
               product.title,
-              style: theme.titleLarge!.copyWith(
-                color: Colors.black,
-                fontWeight: FontWeight.w600
-              ),
+              style: theme.titleLarge!
+                  .copyWith(color: Colors.black, fontWeight: FontWeight.w600),
             ),
             const SizedBox(height: 6.0),
-            Text(
-              '${product.price} \$',
-              style: theme.bodyMedium!.copyWith(
-                color: Colors.red,
-                fontWeight: FontWeight.bold,
+            Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: '${product.price} \$',
+                    style: theme.bodyMedium!.copyWith(
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.lineThrough,
+                    ),
+                  ),
+                  TextSpan(
+                    text: ' ${product.price * (product.discount) / 100} \$',
+                    style: theme.bodyMedium!.copyWith(
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
