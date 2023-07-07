@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:my_ecommerce/models/product.dart';
 import 'package:my_ecommerce/utilities/assets.dart';
 import 'package:my_ecommerce/views/widgets/list_item_home.dart';
@@ -81,7 +82,7 @@ class HomePage extends StatelessWidget {
                   onTap: () {},
                   descriptionText: 'You\'ve Never seen it before!',
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 20),
                 SizedBox(
                   height: 300,
                   child: ListView(
